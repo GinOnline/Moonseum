@@ -1,0 +1,12 @@
+brainstorming
+
++ MAIN
+	- Nav bar con Registro/historial, añadir nuevo elemento (only admin)
+	- Peticiones de herraminetas tipo lista 
+	- Botón "+" para añadir una nueva
+	
+	* Añadir horarios interactivos de cada curso  para hacer dinamica la alerta de devolucion 
+	* Mapa del pañol para ver la ubicacion de las herrmientas
+	* Reloj:hover= indica próxima entrega
+	* Colocar horario maximo a devolver ( entrega pendiente - entrega tarde)
+
