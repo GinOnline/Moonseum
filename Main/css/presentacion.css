@@ -47,14 +47,13 @@ header ul{
     justify-content: center;
     align-items: center;
     border-radius: 36px;
-background: #7596de48;
-box-shadow:  7px 7px 14px #231f45,
-             -7px -7px 14px #5f55bb00;
+    background: #7596de48;
+    box-shadow:  7px 7px 14px #231f45,
+                -7px -7px 14px #5f55bb00;
     
 }
 header ul li{
     list-style: none;
-    
 }
 header ul li a{
     font-size: 1em;

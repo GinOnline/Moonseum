@@ -83,10 +83,12 @@ session_start();
                 <br>          
                 <input type = "text" class="inputRequest" style="height: 2rem;" name="descripcion" placeholder="Descripcion" required>
             </div>
+            <input type = "text" id="selectElemento" style="height: 2rem; margin: 5px" name="ubicacion" placeholder="Sector" required>
+            <br>
 
             <br>
             <label>Sube una imagen:</label>
-            <input id="subirArchivo" type="file" name="uploadedFile_a" />
+            <input id="subirArchivo" type="file" name="uploadedFile" />
 
             <br>
             <!-- Message -->

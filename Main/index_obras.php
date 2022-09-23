@@ -11,6 +11,10 @@
       header('location: login.php');
 
     }
+    if(isset($_GET['museo']))
+    {
+      $_SESSION['museo_selected'] = $_GET['museo'];
+    }
   ?>
   <head>
     
@@ -81,7 +85,7 @@
           <!--Museos -->
           <h2 class="col-4 btn_title">Puntos de interes</h2>
           <!--Agregar nueva -->
-            <a  class="col-1" href="form_new_museum.php">
+            <a  class="col-1" href="form_new_atraccion.php">
               <button class="icon-btn add-btn">
                 <div class="add-icon"></div>
                 <div class="btn-txt">Agregar Nuevo</div>
@@ -177,7 +181,7 @@
 
       
 
-      $sql = "SELECT * FROM atraccion WHERE 
+      $sql = "SELECT * FROM atraccion WHERE museo = ".$_SESSION['museo_selected']." AND
       (nombre LIKE '%".$searchbar."%' OR ID LIKE '%".$searchbar."%' OR descripcion LIKE '%".$searchbar."%')  
       ORDER BY ".$seleccionador."";
       $resultado = mysqli_query($con,$sql) or die(mysqli_error($con));
@@ -200,7 +204,7 @@
 
       ?>
 
-          <a href="index_obras.php?museo=<?php print($fila["ID"])?>" class="card col-3">
+          <a href="atraccion.php?atraccion=<?php print($fila["ID"])?>" class="card col-3">
               <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["ID"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
               <div class="card__body">
                   
@@ -230,7 +234,7 @@
                 <input name = "id_card" <?php echo ' value = "'.$fila['ID'].'" ' ?> style="display: none">
                 <p id="text1"><strong>Nombre :</strong> <?php print($fila['nombre']); ?></p>
                 <p id="text1"><strong>ID  : </strong><?php print($fila['ID']); ?></p>
-                <p id="text1"><strong>Ubicacion   :</strong><?php print($fila['ubicacion']); ?></p>            
+                <p id="text1"><strong>Sector   :</strong><?php print($fila['ubicacion']); ?></p>            
 
               </span>    
       </a>
@@ -320,6 +324,5 @@
                 
         });
     </script>
-
   </body>
 </html>
