@@ -4,7 +4,7 @@ a {
 
 .card {
     --bg: #f7f7f8;
-    --hover-bg: #0a105f;
+    --hover-bg: #6e4033;
     --hover-text: #ffffff;
     /* border-color:#0a105f; */
     border-width: 4px;
@@ -104,8 +104,8 @@ a {
   
   .card:hover {
     background: var(--hover-bg);
-    box-shadow: inset 35px 35px 70px #070b41,
-    inset -35px -35px 70px #0d157d;
+    box-shadow: inset 35px 35px 70px #462b23,
+    inset -35px -35px 70px #462b23;
   }
   
   .card:hover>div,.card:hover>strong {
