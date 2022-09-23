@@ -83,23 +83,25 @@ session_start();
                 <br>          
                 <input type = "text" class="inputRequest" style="height: 2rem;" name="descripcion" placeholder="Descripcion" required>
             </div>
+
+            <br>
             <label>Sube una imagen:</label>
-                <input id="subirArchivo" type="file" name="uploadedFile" />
+            <input id="subirArchivo" type="file" name="uploadedFile_a" />
 
             <br>
             <!-- Message -->
             <?php
-                if (isset($_SESSION['message']) && $_SESSION['message'] && $_SESSION['message'] != 'File is successfully uploaded.')
+                if (isset($_SESSION['message_a']) && $_SESSION['message_a'] && $_SESSION['message_a'] != 'File is successfully uploaded.')
                 {
-                    echo'<b class="errorMessage";>'.$_SESSION['message'].'</b>';
-                    unset($_SESSION['message']);
+                    echo'<b class="errorMessage";>'.$_SESSION['message_a'].'</b>';
+                    unset($_SESSION['message_a']);
                     
                 }
             ?>
         </div>
         <br>
 
-        <input type="submit" id="enviarBoton" value="Enviar">
+        <input type="submit" id="enviarBoton" name = "uploadBtn" value="Enviar">
     </form>
 
 </body>

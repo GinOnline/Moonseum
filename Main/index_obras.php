@@ -132,8 +132,8 @@
                   </optgroup>
 
                   <optgroup label="Ordenar por ID">
-                    <option value="cod DESC">Más recientes</option>
-                    <option value="cod ASC">Más antiguos</option>
+                    <option value="ID DESC">Más recientes</option>
+                    <option value="ID ASC">Más antiguos</option>
                   </optgroup>
 
                 </select>
@@ -160,7 +160,7 @@
       }
       else
       {
-        $seleccionador = "cod";
+        $seleccionador = "ID";
       }
 
       // Definimos la searchbar
@@ -178,7 +178,7 @@
       
 
       $sql = "SELECT * FROM atraccion WHERE 
-      (nombre LIKE '%".$searchbar."%' OR cod LIKE '%".$searchbar."%' OR descripcion LIKE '%".$searchbar."%')  
+      (nombre LIKE '%".$searchbar."%' OR ID LIKE '%".$searchbar."%' OR descripcion LIKE '%".$searchbar."%')  
       ORDER BY ".$seleccionador."";
       $resultado = mysqli_query($con,$sql) or die(mysqli_error($con));
      
@@ -200,8 +200,8 @@
 
       ?>
 
-          <a href="index_obras.php?museo=<?php print($fila["cod"])?>" class="card col-3">
-              <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["cod"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
+          <a href="index_obras.php?museo=<?php print($fila["ID"])?>" class="card col-3">
+              <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["ID"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
               <div class="card__body">
                   
                   <img <?php echo 'src="'.$fila['imagen'].'" alt="'.$fila['nombre'].'"'; ?> width="400px" height = "220px" >
@@ -226,10 +226,10 @@
                 <!-- <input name="button" type=button onclick="if(confirm('¿Estas seguro/a que ha sido devuelto este elemento?')){
                     this.form.submit();}
                 else{ alert('Operación cancelada');}" 
-                title="Marcar como entregada" value = "X" class="fas fa-times-circle" <?php echo 'id ="'.$fila['cod'].'" ' ?>></input> -->
-                <input name = "id_card" <?php echo ' value = "'.$fila['cod'].'" ' ?> style="display: none">
+                title="Marcar como entregada" value = "X" class="fas fa-times-circle" <?php echo 'id ="'.$fila['ID'].'" ' ?>></input> -->
+                <input name = "id_card" <?php echo ' value = "'.$fila['ID'].'" ' ?> style="display: none">
                 <p id="text1"><strong>Nombre :</strong> <?php print($fila['nombre']); ?></p>
-                <p id="text1"><strong>ID  : </strong><?php print($fila['cod']); ?></p>
+                <p id="text1"><strong>ID  : </strong><?php print($fila['ID']); ?></p>
                 <p id="text1"><strong>Ubicacion   :</strong><?php print($fila['ubicacion']); ?></p>            
 
               </span>    
