@@ -76,16 +76,10 @@ section{
     justify-content: center;
     align-items: center;
     
+    
 }
 
-section img{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 150%;
-    object-fit: cover;
-}
+
 #texto{
     color: #fff;
     position: absolute;
@@ -93,75 +87,68 @@ section img{
     font-size: 1.5rem;
     z-index: 9;
     text-align: center;
+    margin-top: 20rem;
 }
 
-/*#explora{
-    text-align: center;
-    border-color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 44px;
-    background-color: #f7f7f7;
-    color: #2b1055;
-    padding: 6px 20px;
-    font-size: 1em;
-    display: inline-block;
-    z-index: 9;
-}*/
-#explora {
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 700;
-    --color: #2b1055;
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 1.2rem 2.8rem;
+    margin: 0;
     font-family: inherit;
-    display: inline-block;
-    
-    margin: 20px;
+    font-size: inherit;
     position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
     overflow: hidden;
-    border-color: #2b1055;
-    transition: color .5s;
-    z-index: 1;
-    padding: 6px 20px;
-    font-size: 1em;
-    border-radius: 44px;
+    background: #CA5116;
+    color: ghostwhite;
+   }
+   
+   button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    color: ghostwhite;
+   }
+   
+   button:hover span {
+    color: ghostwhite;
     
-    color: var(--color);
+
    }
    
-   #explora:before {
-    content: "";
+   button::before,
+   button::after {
     position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
    }
    
-   #explora:hover {
-    color: #fff;
+   button::before {
+    content: "";
+    background: #581C0C;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
    }
    
-   #explora:before {
-    top: 100%;
-    left: 100%;
-    transition: all .7s;
+   button:hover::before {
+    transform: translate3d(100%, 0, 0);
    }
    
-   #explora:hover:before {
-    top: -30px;
-    left: -30px;
-   }
-   
-   #explora:active:before {
-    background: #3a0ca3;
-    transition: background 0s;
-   }
 
 .slide{
     position: relative;
-    padding: 40px;
+    padding: 35px 25px;
     border-radius: 36px;
     
     background: #6e4033;
@@ -180,12 +167,14 @@ section img{
 }
 .slide h2{
     font-size: 3.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     color: #fff;
 }
 .slide p{
     font-size: 1.2em;
     color: #fff;
+    text-align: justify;
+  text-justify: inter-word;
 }
 /* #moon{
 /*     
