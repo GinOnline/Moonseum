@@ -25,9 +25,9 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: #204986;
+  background-color: #f1dab2;
   overflow-x: hidden;
-  color: #fff
+  color: #581C0C;
 }
 
 
@@ -35,7 +35,7 @@ header {
   margin-top: 0px;
   position: flex;
   display: flex;
-  background-color: #487ae4;
+  background-color: #581C0C;
 
   color: rgb(107, 29, 29);
 
@@ -84,7 +84,7 @@ header ul li {
   transition: ease-out 0.5s;
   border-radius: 30px;
   box-shadow: inset 0 0 0 0 #fff;
-  background: #0a105f;
+  background: #581C0C;
   border: 2px solid #fff;
 
   font-weight: 900;
@@ -135,11 +135,17 @@ header ul li a.active {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  display: flex;
+ 
 }
-
+.logo a{
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
 .d-flex button {
   height: 40px;
-  background-color: #0a105f;
+  background-color: #581C0C;
   color: #fff;
   border-color: #fff;
   font-size: 18px;
@@ -148,9 +154,9 @@ header ul li a.active {
 }
 
 .d-flex button:hover {
-  background-color: #c5c9ff;
-  color: #0a105f;
-  border-color: #0a105f;
+  background-color: #693f34;
+  color: #ffffff;
+  border-color: #693f34;
   font-weight: 600;
 }
 

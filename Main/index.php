@@ -42,7 +42,8 @@
         <header>
           <h2 class="logo">
             <a style="text-decoration: none; margin:0;" href="index.php">
-              <img src="./img/Pañol_3.png" height = "115px">
+              <img src="./img/museumLogo2.png" height = "115px">
+              MOONSEUM
             </a>
           </h2>
    
@@ -65,11 +66,8 @@
                 </ul>
                 <a href="#"></a>
           </nav>
-          <!-- Clock // Reloj -->
-          <!-- Button trigger modal -->
-
-          <button id="clock" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          </button>
+ 
+          
         </header>
         <br>
         <br>
