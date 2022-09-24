@@ -132,11 +132,13 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <div class="w3-center">
           <h3><?php print($fila['nombre']); ?></h3>
-          <h6><?php print($fila['descripcion']); ?> ,  <span class="w3-opacity">May 2, 1512</span></h6>
+          <h6><?php print($fila['autor']); ?> ,  <span class="w3-opacity">May 2, 1512</span></h6>
         </div>
         
         <div class="w3-justify">
-          <img src="<?php print($fila['imagen']); ?>" alt="<?php print($fila['nombre']); ?>" style="width:30%" class="w3-padding-16">
+          <center>
+            <img style="border-radius:30px; width:20%; margin:30px" src="<?php print($fila['imagen']); ?>" alt="<?php print($fila['nombre']); ?>">
+          </center>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia doloribus deleniti, assumenda, enim eaque amet, optio libero dignissimos esse aperiam ratione consequuntur fuga. Possimus suscipit perspiciatis expedita sed. Dolor, dolorem.<?php print($fila['descripcion']); ?></p>
           <p>Aut soluta voluptatem id nemo nobis blanditiis optio fuga neque iure. Facilis, fugit illum cum quisquam fugiat alias iusto iure expedita sapiente!<p><?php print($fila['descripcion']); ?></p></p>
           <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
