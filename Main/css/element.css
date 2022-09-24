@@ -30,8 +30,8 @@
     } */
 
     *{
-        background-color: #401464;
-        color: #8e87cf;
+        background-color: #fcd084;
+        color: #581C0C;
         font-size: 20px;
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
@@ -43,11 +43,11 @@
     }
 
     #fondoForm{
-        background-color: hsla(246, 43%, 67%, 0.502);
+        background-color: #693f34;
         min-height: 50vh;
         width: 69vh;
-        margin-left: 30%;
-        padding: 5vh;
+        margin-left: 32%;
+        padding: 20px;
         border-radius: 10px;
     }
 
@@ -83,9 +83,14 @@
         height: 10%;
         width: 83%;
         margin-bottom: 1vh;
-       
+       padding: 5px;
         margin-left: 6%;
-        text-align: center;
+        
+    }
+    label{
+        margin-left: 6%;
+        margin-bottom: 0.5rem;
+        font-size: 22px;
     }
 
     .inputElement::placeholder{
@@ -105,41 +110,40 @@
     font-size: 16px;
 }
 
-label{
-    font-size: 22px;
-}
-
 #subirArchivo[type=file]::file-selector-button {
-     background-color: #d0a6f5;
+    margin-left: 8%;
+     background-color: #fcd084;
      border-radius: 10px;
-     border-color: #27043f;
-     color: #27043f;
+     border-color: #fcd084;
+     color: #581C0C;
      border-width: 3px;
-     width: 21vh;
+     width: 10rem;
+     padding: 8px;
      font-size: 21px;
 }
 
     #cargarElemento{
-        background-color: #b378e4;
-        color: #350e72;
+        background-color: #fcd084;
+        color: #581C0C;
         font-size: 23px;
         width: 30%;
         height: 15%;
         border-radius: 10px;
         margin-left: 34.5%;
-        border-color: #2c0757;
+        border-color: #fcd084;
         transition: .3s;
         cursor: pointer;
         margin-bottom: 10px;
-        padding: 2px;
+        padding: 10px;
         margin-top: 2.5vh;
     }
 
+    iframe
         
     #cargarElemento:hover{
-        background-color: #a42cd4d5;
+        background-color: #ff9f44;
         color: #ffffff;
-        border-color: #2c0757;
+        border-color: #ff9f44;
         cursor: pointer;
     }
 

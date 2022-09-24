@@ -10,7 +10,7 @@
     width: 1rem;
 }
 ::-webkit-scrollbar-track{
-    background: #F1E3CB;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb{
     background: #581C0C;
@@ -18,7 +18,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: #F1E3CB;
+    background-color: #fcd084;
     overflow-x: hidden;
 }
 header{
@@ -47,14 +47,13 @@ header ul{
     justify-content: center;
     align-items: center;
     border-radius: 36px;
-background: #7596de48;
-box-shadow:  7px 7px 14px #231f45,
-             -7px -7px 14px #5f55bb00;
+    background: #7596de48;
+    box-shadow:  7px 7px 14px #231f45,
+                -7px -7px 14px #5f55bb00;
     
 }
 header ul li{
     list-style: none;
-    
 }
 header ul li a{
     font-size: 1em;

@@ -60,7 +60,7 @@ if (!empty($_POST['txtusuario']) && !empty($_POST['txtpassword'])) {
 <body>
     <br>
     <br>
-    <h1 class="title">PAÑOL</h1>
+    <h1 class="title">MOONSEUM</h1>
     <div  class="contenedor-form">
             <div class="toggle">
                 <span> Crear Cuenta</span>
