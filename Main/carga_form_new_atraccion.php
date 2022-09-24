@@ -1,90 +1,74 @@
 <?php
     include 'conection.php';
 
+    // Subir Imagenes
     session_start();
+    $message = ''; 
+    // if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'])
+    // {
+    //     if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK)
+    //     {
+    //         // get details of the uploaded file
+    //         $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
+    //         $fileName = $_FILES['uploadedFile']['name'];
+    //         $fileSize = $_FILES['uploadedFile']['size'];
+    //         $fileType = $_FILES['uploadedFile']['type'];
+    //         $fileNameCmps = explode(".", $fileName);
+    //         $fileExtension = strtolower(end($fileNameCmps));
 
+    //         // sanitize file-name
+    //         $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
 
-    // Comprobamos que el elemento exista
+    //         // check if file has one of the following extensions
+    //         $allowedfileExtensions = array('jpg', 'jpeg', 'png', 'ico', 'bmp', 'tif');
 
-    $elementoSelected = $_POST['elemento'];
-    $query = mysqli_query($con, "SELECT * FROM elemento WHERE nombre = '".$elementoSelected."' ");
-    $nr = mysqli_num_rows($query);
-        
-    if($nr >= 1)
-    {	
-        $curso = $_POST['curso'];
-        $cantidad = $_POST['cantidad'];
-        $elemento = $_POST['elemento'];
-        $nombre = $_POST['nombre'];
-        $pañolero = $_SESSION['username'];
-        $apellido = $_POST['apellido'];
-        $hora_estimada = $_POST['time'];
+    //         if (in_array($fileExtension, $allowedfileExtensions))
+    //         {
+    //             // directory in which the uploaded file will be moved
+    //             $uploadFileDir = './imagenes_atracciones/';
+    //             $dest_path = $uploadFileDir . $fileName;
 
-        $sql = mysqli_query($con, "SELECT * FROM elemento WHERE nombre = '".$elementoSelected."' ");
+    //             if(move_uploaded_file($fileTmpPath, $dest_path)) 
+    //             {
+    //                 $message ='File is successfully uploaded.';
+    //             }
+    //             else 
+    //             {
+    //                 $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server.';
+    //             }
+    //         }
+    //         else
+    //         {
+    //             $message = 'Upload failed. Allowed file types: ' . implode(',', $allowedfileExtensions);
+    //         }
+    //     }
+    //     else
+    //     {
 
-        while($fila = mysqli_fetch_array($sql) ){
+    //         $message = 'There is some error in the file upload. Please check the following error.<br>';
+    //         $message .= 'Error:' . $_FILES['uploadedFile'];
+    //     }
+    // }
+    // $_SESSION['message_a'] = $message;
 
-            $stock_pedido = $fila['faltantes'] +  $cantidad;
-
-            $query = mysqli_query($con, "SELECT * FROM elemento WHERE nombre = '".$elementoSelected."' and stock >= '".$stock_pedido."' ");
-            $nr = mysqli_num_rows($query);
-            
-            if($nr >= 1){
-                
-           
-                // Agregar request
-                $agregar = "INSERT INTO request(elemento, cantidad , curso, nombre, apellido, pañolero, fecha_estimada_devolucion) VALUES ('" . $elemento . "', '".$cantidad."', '".$curso."', '".$nombre."', '".$apellido."', '".$pañolero."', '".$hora_estimada."')";
-                mysqli_query($con, $agregar) or die(mysqli_error($con));
-
-                // Modificar faltantes
-
-
-                $agregar = "UPDATE elemento
-                SET faltantes = ". $stock_pedido ."
-                WHERE nombre = '". $elemento ."' ";
-                mysqli_query($con, $agregar) or die(mysqli_error($con));
-
-
-                header('Location: form_new_request.php');
-
-
-            }
-            else
-            {
-                
-                $restantes = $fila['stock'] - $fila['faltantes'];
-                if($restantes == 0){
-
-                    $_SESSION['error_form_request'] = "Todos/as ".$fila['nombre']."s están en uso";
-                }
-                else{
-                    $_SESSION['error_form_request'] = $restantes." herramientas restantes";
-
-                }
-
-                header('Location: form_new_request.php');
-
-
-            }
-
-
+    // // Comprobamos que no haya un error al cargar la imagen
+    // if ($_SESSION['message_a'] == 'File is successfully uploaded.')
+    // {
+        // Cargar datos a la DBB
+        $sql = "SELECT cod FROM museo WHERE nombre = '".$_POST['museo']."' ";
+        $res = mysqli_query($con, $sql) or die(mysqli_error($con));
+        while ($row = $res->fetch_assoc()) {
+            $museo = $row['cod'];
         }
+        $descripcion = $_POST['descripcion'];
+        $nombre = $_POST['nombre'];
+        $ubicacion = $_POST['ubicacion'];
+        // $imagen = $uploadFileDir.$fileName;
+        $imagen = $_POST['nombre']."jpg";
 
-    
-    }
-    else 
-    {
-        
+        $sql = "INSERT INTO atraccion(descripcion, nombre, imagen, museo, ubicacion) VALUES ('" . $descripcion . "', '".$nombre."', '".$imagen."', '".$museo."', '".$ubicacion."')";
+        mysqli_query($con, $sql) or die(mysqli_error($con));
 
-        // Insertar cookie para enviar un mensaje de eroor en el formulario
-        $_SESSION['error_form_request'] = "Inserte un elemento válido";
-
-        header("Location: form_new_request.php");
-
-    }
-    
-
-  
-
-
+    // }
+    header('Location: form_new_atraccion.php');
 ?>

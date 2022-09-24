@@ -11,9 +11,17 @@
       header('location: login.php');
 
     }
+    if(isset($_GET['museo']))
+    {
+      $_SESSION['museo_selected'] = $_GET['museo'];
+    }
   ?>
   <head>
-    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
    <!-- Bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -55,8 +63,20 @@
                       <a class = "header-btn" href="historial.php">Historial</a>
                   </li>
                   <li>
-                      <a class = "header-btn" href="form_new_museum.php">Nuevo Elemento</a>
+                    <button type="button" class= "header-btn" data-toggle="modal" data-target="#exampleModalLong">
+                      Mapa
+                    </button>          
                   </li>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+                  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        ...
+                      </div>
+                    </div>
+                  </div>
+
                   
                   <li>
                       <a class = "logOut" href="close.php">LogOut</a>
@@ -65,12 +85,9 @@
                 </ul>
                 <a href="#"></a>
           </nav>
-          <!-- Clock // Reloj -->
-          <!-- Button trigger modal -->
-
-          <button id="clock" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          </button>
         </header>
+
+
         <br>
         <br>
         <br>
@@ -81,7 +98,7 @@
           <!--Museos -->
           <h2 class="col-4 btn_title">Puntos de interes</h2>
           <!--Agregar nueva -->
-            <a  class="col-1" href="form_new_museum.php">
+            <a  class="col-1" href="form_new_atraccion.php">
               <button class="icon-btn add-btn">
                 <div class="add-icon"></div>
                 <div class="btn-txt">Agregar Nuevo</div>
@@ -132,8 +149,8 @@
                   </optgroup>
 
                   <optgroup label="Ordenar por ID">
-                    <option value="cod DESC">Más recientes</option>
-                    <option value="cod ASC">Más antiguos</option>
+                    <option value="ID DESC">Más recientes</option>
+                    <option value="ID ASC">Más antiguos</option>
                   </optgroup>
 
                 </select>
@@ -160,7 +177,7 @@
       }
       else
       {
-        $seleccionador = "cod";
+        $seleccionador = "ID";
       }
 
       // Definimos la searchbar
@@ -177,8 +194,8 @@
 
       
 
-      $sql = "SELECT * FROM atraccion WHERE 
-      (nombre LIKE '%".$searchbar."%' OR cod LIKE '%".$searchbar."%' OR descripcion LIKE '%".$searchbar."%')  
+      $sql = "SELECT * FROM atraccion WHERE museo = ".$_SESSION['museo_selected']." AND
+      (nombre LIKE '%".$searchbar."%' OR ID LIKE '%".$searchbar."%' OR descripcion LIKE '%".$searchbar."%')  
       ORDER BY ".$seleccionador."";
       $resultado = mysqli_query($con,$sql) or die(mysqli_error($con));
      
@@ -200,8 +217,8 @@
 
       ?>
 
-          <a href="index_obras.php?museo=<?php print($fila["cod"])?>" class="card col-3">
-              <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["cod"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
+          <a href="test.php?atraccion=<?php print($fila["ID"])?>" class="card col-3">
+              <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["ID"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
               <div class="card__body">
                   
                   <img <?php echo 'src="'.$fila['imagen'].'" alt="'.$fila['nombre'].'"'; ?> width="400px" height = "220px" >
@@ -226,11 +243,11 @@
                 <!-- <input name="button" type=button onclick="if(confirm('¿Estas seguro/a que ha sido devuelto este elemento?')){
                     this.form.submit();}
                 else{ alert('Operación cancelada');}" 
-                title="Marcar como entregada" value = "X" class="fas fa-times-circle" <?php echo 'id ="'.$fila['cod'].'" ' ?>></input> -->
-                <input name = "id_card" <?php echo ' value = "'.$fila['cod'].'" ' ?> style="display: none">
+                title="Marcar como entregada" value = "X" class="fas fa-times-circle" <?php echo 'id ="'.$fila['ID'].'" ' ?>></input> -->
+                <input name = "id_card" <?php echo ' value = "'.$fila['ID'].'" ' ?> style="display: none">
                 <p id="text1"><strong>Nombre :</strong> <?php print($fila['nombre']); ?></p>
-                <p id="text1"><strong>ID  : </strong><?php print($fila['cod']); ?></p>
-                <p id="text1"><strong>Ubicacion   :</strong><?php print($fila['ubicacion']); ?></p>            
+                <p id="text1"><strong>ID  : </strong><?php print($fila['ID']); ?></p>
+                <p id="text1"><strong>Sector   :</strong><?php print($fila['ubicacion']); ?></p>            
 
               </span>    
       </a>
@@ -320,6 +337,5 @@
                 
         });
     </script>
-
   </body>
 </html>
