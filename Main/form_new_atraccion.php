@@ -54,20 +54,7 @@ session_start();
             <a id="volverAtras" onmouseover="cambioColor()" onmouseout="vueltaColor()" href="index.php"> Volver</a>
         </div>
         <div class="personal_info">
-            <input type="search" id="selectElemento" style="height: 2.4rem;width:95%;" name="museo" placeholder="Museo" list="listaMuseos" required>
-            <datalist id="listaMuseos">
-                <?php
-                $sql = "SELECT * FROM museo";
-                $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
-
-                while ($fila = mysqli_fetch_array($resultado)) {
-
-                    echo  '<option value="' . $fila['nombre'] . '">';
-                }
-
-                ?>
-            </datalist>
-            <br>
+           
         <!-- Mensaje de error -->
         <?php 
             if (!empty($_SESSION['error_form_request'])) {
@@ -79,15 +66,23 @@ session_start();
     <br>
 
             <div class="name_forms">
+                
                 <input type = "text" class="inputRequest" style="height: 2rem;" name="nombre" placeholder="Nombre" required>
                 <br>          
-                <input type = "text" class="inputRequest" style="height: 2rem;" name="descripcion" placeholder="Descripcion" required>
+                <input type = "text" class="inputRequest" style="height: 2rem;" name="autor" placeholder="Autor" required>
             </div>
-            <input type = "text" id="selectElemento" style="height: 2rem; margin: 5px" name="ubicacion" placeholder="Sector" required>
+            <br>
+            
+            <input type = "text" class="inputRequest" style="height: 2rem;margin-left:1rem;" name="Descripción" placeholder="Descripcion" required>
+            <br>
+            <br>
+            <input type = "text" id="selectElemento" style="height: 2rem;margin-left:1rem;" name="sector" placeholder="Sector" required>
             <br>
 
             <br>
-            <label>Sube una imagen:</label>
+            <label style="margin-left:1rem;">Sube una imagen:</label>
+            <br>
+            
             <input id="subirArchivo" type="file" name="uploadedFile" />
 
             <br>
