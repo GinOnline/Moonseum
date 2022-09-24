@@ -62,22 +62,23 @@ if (isset($_GET['museo'])) {
     <nav>
       <ul>
         <li>
-          <a class="header-btn active" href="index.php">Inicio</a>
+          <a class="header-btn" href="index.php">Inicio</a>
         </li>
         <li>
-          <a class="header-btn" href="historial.php">Historial</a>
+          <a class="header-btn" href="secret.html">Presentacion</a>
         </li>
         <li>
-          <button type="button" class="header-btn" data-toggle="modal" data-target="#exampleModalLong">
+          <a class="header-btn active" href="#">Museo</a>
+        </li>
+        <li>
+          <button type="button" class="header-btn" data-toggle="modal" data-target=".bd-example-modal-lg"> 
             Mapa
           </button>
         </li>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              ...
+              <img src="./img/plano_gral.png" alt="Plano Museo ">
             </div>
           </div>
         </div>

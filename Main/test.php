@@ -77,15 +77,17 @@ and is wrapped around the whole page content, except for the footer in this exam
           <nav>
                 <ul>
                   <li>
-                      <a class="header-btn active" href="index.php">Inicio</a>
+                    <a class="header-btn" href="index.php">Inicio</a>
                   </li>
                   <li>
-                      <a class = "header-btn" href="historial.php">Historial</a>
+                    <a class="header-btn" href="secret.html">Presentacion</a>
                   </li>
                   <li>
-                      <a class = "header-btn" href="form_new_museum.php">Nuevo Elemento</a>
+                    <a class="header-btn" href="index_obras.php">Museo</a>
                   </li>
-                  
+                  <li>
+                    <a class="header-btn active" href="#">Obra</a>
+                  </li>
                   <li>
                       <a class = "logOut" href="close.php">LogOut</a>
                   </li>
