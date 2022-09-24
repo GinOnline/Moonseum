@@ -54,19 +54,17 @@
     // // Comprobamos que no haya un error al cargar la imagen
     // if ($_SESSION['message_a'] == 'File is successfully uploaded.')
     // {
+        
         // Cargar datos a la DBB
-        $sql = "SELECT cod FROM museo WHERE nombre = '".$_POST['museo']."' ";
-        $res = mysqli_query($con, $sql) or die(mysqli_error($con));
-        while ($row = $res->fetch_assoc()) {
-            $museo = $row['cod'];
-        }
+        $museo = $_SESSION['museo_selected'];
         $descripcion = $_POST['descripcion'];
         $nombre = $_POST['nombre'];
         $ubicacion = $_POST['ubicacion'];
+        $autor = $_POST['autor'];
         // $imagen = $uploadFileDir.$fileName;
-        $imagen = $_POST['nombre']."jpg";
+        $imagen = "./imagenes_atracciones/".$_POST['nombre'].".png";
 
-        $sql = "INSERT INTO atraccion(descripcion, nombre, imagen, museo, ubicacion) VALUES ('" . $descripcion . "', '".$nombre."', '".$imagen."', '".$museo."', '".$ubicacion."')";
+        $sql = "INSERT INTO atraccion(descripcion, nombre, imagen, museo, ubicacion, autor) VALUES ('" . $descripcion . "', '".$nombre."', '".$imagen."', '".$museo."', '".$ubicacion."', '".$autor."')";
         mysqli_query($con, $sql) or die(mysqli_error($con));
 
     // }

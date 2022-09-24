@@ -51,7 +51,7 @@ session_start();
 
         <div id="volverBoth">
             <i class="fas fa-chevron-left" id="volverAtrasElemento"></i>
-            <a id="volverAtras" onmouseover="cambioColor()" onmouseout="vueltaColor()" href="index.php"> Volver</a>
+            <a id="volverAtras" onmouseover="cambioColor()" onmouseout="vueltaColor()" href="index_obras.php"> Volver</a>
         </div>
         <div class="personal_info">
            

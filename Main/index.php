@@ -200,7 +200,7 @@
       ?>
 
           <a href="index_obras.php?museo=<?php print($fila["cod"])?>" class="card col-3">
-              <strong class="card_title"><?php echo ' '.$fila["nombre"].'_'.$fila["cod"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
+              <strong class="card_title"><?php echo ' '.$fila["nombre"]; //estaba testeando como quedaba con la cantidad en el titulo?></strong> 
               <div class="card__body">
                   
                   <img <?php echo 'src="'.$fila['imagen'].'" alt="'.$fila['nombre'].'"'; ?> width="400px" height = "220px" >
