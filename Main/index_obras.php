@@ -164,8 +164,16 @@ if (isset($_GET['museo'])) {
     </div>
 
   </div>
-  <h3 class="MuseumName">Museo de Bellas Artes BSAS</h3>
+  <?php
+    $sql = "SELECT * FROM museo WHERE cod = ".$_SESSION['museo_selected']." ";
+    $resultado = mysqli_query($con , $sql);
 
+    while ($fila = mysqli_fetch_array($resultado)) {
+  ?>
+
+  <h3 class="MuseumName"><?php print( $fila['nombre']); ?></h3>
+
+  <?php } ?>
   <!-- Items Body -->
 
   <div class="items-container display-flex row justify-content-center">
