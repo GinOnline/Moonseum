@@ -99,9 +99,9 @@ if (isset($_GET['museo'])) {
 
   <div class="row justify-content-center">
 
-    <div class="col-5 row" style="align-items:center;">
+    <div class="col-6 row" style="align-items:center;">
       <!--Museos -->
-      <h2 class="col-4 btn_title">Puntos de interés</h2>
+      <h2 class="col-5 btn_title">Puntos de interés</h2>
       <!--Agregar nueva -->
       <a class="col-1" href="form_new_atraccion.php">
         <button class="icon-btn add-btn">
@@ -112,12 +112,12 @@ if (isset($_GET['museo'])) {
 
     </div>
 
-    <div class="col-7 row search-part" style="align-items:center;">
+    <div class="col-6 row search-part" style="align-items:center;">
 
       <!--SearchBar -->
 
       <div class="col-7">
-        <div class="col-7">
+        <div class="col-10">
           <form class="d-flex input-group" id="searchbar" method="GET">
             <!-- Se necesita centrar la X de eliminar -->
             <?php
@@ -163,8 +163,7 @@ if (isset($_GET['museo'])) {
     </div>
 
   </div>
-  <br>
-
+  <h3 class="MuseumName">Museo de Bellas Artes BSAS</h3>
 
   <!-- Items Body -->
 

@@ -98,7 +98,7 @@
             <!--SearchBar -->
 
             <div class="col-7" >
-              <div class = "col-7">
+              <div class = "col-9">
                 <form class="d-flex input-group" id="searchbar" method = "GET">
                   <!-- Se necesita centrar la X de eliminar -->
                   <?php
