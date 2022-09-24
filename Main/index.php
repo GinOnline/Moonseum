@@ -58,12 +58,8 @@
                       <a class="header-btn active" href="index.php">Inicio</a>
                   </li>
                   <li>
-                      <a class = "header-btn" href="historial.php">Historial</a>
+                      <a class = "header-btn" href="secret.html">Presentacion</a>
                   </li>
-                  <li>
-                      <a class = "header-btn" href="form_new_museum.php">Nuevo Elemento</a>
-                  </li>
-                  
                   <li>
                       <a class = "logOut" href="close.php">LogOut</a>
                   </li>
