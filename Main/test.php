@@ -18,15 +18,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Atraccion</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Atraccion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-<!-- Bootstrap -->
+  <!-- Bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
      
@@ -45,11 +45,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+
     <link rel="icon" href=".\img\icono.ico">
 
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
+
+
+
+
 </style>
 </head>
 <body class="w3-light-grey">
@@ -108,6 +117,20 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
         ?>
+        <!-- Mapa -->
+        <button style="border-radius:25px; padding:20px; font-size:20px;" type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+          <i class="fas fa-map-marked-alt"></i>
+        </button>
+
+        <!-- IMG -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <img src="./img/Mapa_jardin.jpg" alt="Plano General">
+            </div>
+          </div>
+        </div>
+
 
         <div class="w3-center">
           <h3><?php print($fila['nombre']); ?></h3>
@@ -119,7 +142,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia doloribus deleniti, assumenda, enim eaque amet, optio libero dignissimos esse aperiam ratione consequuntur fuga. Possimus suscipit perspiciatis expedita sed. Dolor, dolorem.<?php print($fila['descripcion']); ?></p>
           <p>Aut soluta voluptatem id nemo nobis blanditiis optio fuga neque iure. Facilis, fugit illum cum quisquam fugiat alias iusto iure expedita sapiente!<p><?php print($fila['descripcion']); ?></p></p>
           <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">6</span></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">4</span></button></p>
           <p class="w3-clear"></p>
           <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
           <!-- Comentario -->

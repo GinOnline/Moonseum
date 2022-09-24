@@ -33,6 +33,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="icon" href=".\img\icono.ico">
     <title>Home</title>
 
@@ -41,7 +46,7 @@
   <body>
         <header>
           <h2 class="logo">
-            <a style="text-decoration: none; margin:0;" href="index.php">
+            <a class="logoText" href="index.php">
               <img src="./img/museumLogo2.png" height = "115px">
               MOONSEUM
             </a>
