@@ -1,35 +1,4 @@
-/* input, select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-    input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-    background-color: #45a049;
-    }
-
-    div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    } */
-
-    *{
+    * {
         background-color: #fcd084;
         color: #581C0C;
         font-size: 20px;
@@ -37,12 +6,12 @@
         font-weight: 800;
     }
 
-    #p{
+    #p {
         font-size: 50px;
         font-family: 'Signika', sans-serif;
     }
 
-    #fondoForm{
+    #fondoForm {
         background-color: #693f34;
         min-height: 50vh;
         width: 69vh;
@@ -51,29 +20,29 @@
         border-radius: 10px;
     }
 
-    #volverAtras{
+    #volverAtras {
         font-size: 22px;
         background-color: #02112400;
         color: white;
         text-decoration: none;
     }
 
-    #volverBoth{
+    #volverBoth {
         background-color: #072a5700;
         margin-bottom: 3%;
     }
-    
-    #volverAtrasElemento{
+
+    #volverAtrasElemento {
         color: white;
         background-color: #02112400;
     }
-    
-    #volverAtrasElemento:hover{
-        color:red;
+
+    #volverAtrasElemento:hover {
+        color: red;
         cursor: pointer;
     }
 
-    .inputElement{
+    .inputElement {
         background-color: transparent;
         color: #ffffff;
         font-size: 21px;
@@ -83,46 +52,75 @@
         height: 10%;
         width: 83%;
         margin-bottom: 1vh;
-       padding: 5px;
+        padding: 5px;
         margin-left: 6%;
-        
+
     }
-    label{
+
+    label {
         margin-left: 6%;
         margin-bottom: 0.5rem;
         font-size: 22px;
     }
 
-    .inputElement::placeholder{
+    .inputElement::placeholder {
         background-color: transparent;
         color: #ffffff;
         border-color: #401464;
-        
+
     }
 
-#subirArchivo, label{
-    background-color: transparent;
-    color: #fff;
-    width: 39vh;    
-}
+    .iframeCont {
+       
+        background-color: #693f34;
+        margin-left: 3%;
+        width: 10%;
+    }
+    iframe{
+        
+        padding: 0;
+        margin: 0;
+    }
+    #subirArchivo,
+    label {
+        background-color: transparent;
+        color: #fff;
 
- #subirArchivo{
-    font-size: 16px;
-}
+    }
 
-#subirArchivo[type=file]::file-selector-button {
-    margin-left: 8%;
-     background-color: #fcd084;
-     border-radius: 10px;
-     border-color: #fcd084;
-     color: #581C0C;
-     border-width: 3px;
-     width: 10rem;
-     padding: 8px;
-     font-size: 21px;
-}
+    #subirArchivo {
+        font-size: 16px;
+        width: 100%;
+        transition: .4s;
+    }
 
-    #cargarElemento{
+    #subirArchivo[type=file]::file-selector-button {
+        text-align: center;
+        margin-left: 8%;
+        background-color: #fcd084;
+        border-radius: 10px;
+        border-color: #fcd084;
+        color: #581C0C;
+        width: 11rem;
+        padding: 8px;
+        font-size: 21px;
+        font-weight: 550;
+    }
+
+    #subirArchivo[type=file]::file-selector-button:hover {
+        margin-left: 8%;
+        background-color: #ff9f44;
+        border-radius: 10px;
+        border-color: #fcd084;
+        color: #fff;
+        width: 11rem;
+        padding: 8px;
+        font-size: 21px;
+        cursor: pointer;
+        font-weight: 550;
+    }
+
+    #cargarElemento {
         background-color: #fcd084;
         color: #581C0C;
         font-size: 23px;
@@ -131,29 +129,20 @@
         border-radius: 10px;
         margin-left: 34.5%;
         border-color: #fcd084;
-        transition: .3s;
+        transition: .4s;
         cursor: pointer;
         margin-bottom: 10px;
         padding: 10px;
         margin-top: 2.5vh;
     }
 
-    iframe
-        
-    #cargarElemento:hover{
+    #cargarElemento:hover {
         background-color: #ff9f44;
         color: #ffffff;
         border-color: #ff9f44;
         cursor: pointer;
     }
-
-    #cargarElemento:active{
-        color: #a42cd4d5;
-        background-color: #2c0757;
-        border-color: #421b6e;
-    }
-
-    .errorMessage{
+    .errorMessage {
         background-color: transparent;
         color: rgb(226, 168, 168);
         font-size: 15px;
