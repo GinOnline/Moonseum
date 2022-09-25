@@ -119,7 +119,7 @@ header ul li a.active {
   cursor: pointer;
   transition: ease-out 0.5s;
   border-radius: 30px;
-  box-shadow: inset 0 0 0 0 #4f1798;
+  box-shadow: inset 0 0 0 0 #ff9f44;
   background: transparent;
   border: 2px solid #fff;
 
@@ -129,7 +129,7 @@ header ul li a.active {
 
 .logOut:hover {
   color: white;
-  box-shadow: inset 0 -100px 0 0 #4f1798;
+  box-shadow: inset 0 -100px 0 0 #ff9f44;
   border: 2px solid #fff;
   font-weight: 900;
 }
@@ -217,7 +217,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  opacity: 80%;
+  
 
 }
 
