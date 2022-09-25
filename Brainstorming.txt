@@ -1,12 +1,23 @@
-brainstorming
+BRAINSTORMING
 
-+ MAIN
-	- Nav bar con Registro/historial, añadir nuevo elemento (only admin)
-	- Peticiones de herraminetas tipo lista 
-	- Botón "+" para añadir una nueva
++ Pagina WEB
+	- Nav bar con Presentacion, añadir nuevomuseo  (only admin)
+	- Museos tipo lista 
+	- Botón "+" para añadir una nuevo
 	
-	* Añadir horarios interactivos de cada curso  para hacer dinamica la alerta de devolucion 
-	* Mapa del pañol para ver la ubicacion de las herrmientas
-	* Reloj:hover= indica próxima entrega
-	* Colocar horario maximo a devolver ( entrega pendiente - entrega tarde)
+	* Añadir turnero interactivos de user
+	* Mapa del museo para ver la ubicacion con API de google maps 
+	* Mapa del sector de la obra interactivo con la DDBB
+	* Obras similiar a museos
+	* Colocar panel de horario de la proxima visita (  pendiente -  tarde)
 
++ APP
+	- Recibe los datos de la DDBB
+	- Accede al Beepcon mediante protocolo UUID de bt
+	- Protocolo Talkback o similar para leer en voz alta
+	- Google translate
+
++ Beepcon
+	- App interfaz simple
+	- Emite constantemente peticiones de bt
+	- Recibe datos de la DDBB
