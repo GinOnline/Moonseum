@@ -52,23 +52,18 @@
             </div>
 
         <br>
-
-
-            <label for="nombre">Nombre</label>
-            <input type="text" class="inputElement" name="nombre"  required>     
+            <input type="text" class="inputElement" name="nombre" placeholder="Nombre"  required>     
             <br>
             <br> 
-            <label for="nombre">Descripción</label>
-            <input type="text" class="inputElement" name="descripcion" required> 
+            <input type="text" class="inputElement" name="descripcion" placeholder="Descripción" required> 
             <br>
             <br>
-            <label for="nombre">Ubicación</label>
-            <input type="text" class="inputElement" name="ubicacion" required> 
+            <input type="text" class="inputElement" name="ubicacion" placeholder="Ubicación" required> 
             <br>
             <br>
             
             <div class="iframeCont" >  
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4973.385590621022!2d-64.4871928788715!3d-31.093033348512456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d82fe21382471%3A0x397735a75f080556!2sInstituto%20T%C3%A9cnico%20La%20Falda!5e0!3m2!1ses!2sar!4v1663881903316!5m2!1ses!2sar" width="450" height="100" style="display:flex; margin-left:17px; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4973.385590621022!2d-64.4871928788715!3d-31.093033348512456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d82fe21382471%3A0x397735a75f080556!2sInstituto%20T%C3%A9cnico%20La%20Falda!5e0!3m2!1ses!2sar!4v1663881903316!5m2!1ses!2sar" width="380" height="100" style="display:flex; margin-left:17px; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <br>
 

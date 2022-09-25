@@ -92,7 +92,7 @@ session_start();
                 <input type="text" class="inputRequest" style="height: 2rem;" name="autor" placeholder="Apellido" required>
             </div>
             <br>
-            <input type="number" class="inputRequest" style="height: 2rem;width:310px; margin-left:3%;" name="telefono" placeholder="Teléfono" required>
+            <input type="number" class="inputRequest" style="height: 2rem;width:245px; margin-left:3%;" name="telefono" placeholder="Teléfono" required>
 
         </div>
         <br>

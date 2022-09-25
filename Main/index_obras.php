@@ -268,8 +268,7 @@ if (isset($_GET['museo'])) {
 
 
   <footer>
-    <a href="./secret.html" class="easter_egg"><img src=".\img\logo_2.png" width="2.2%" alt="MoonDrive_logo"></a>
-    <span>© MoonDrive Company </span>
+  
 
   </footer>
 

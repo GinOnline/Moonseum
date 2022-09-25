@@ -61,6 +61,9 @@
                       <a class = "header-btn" href="secret.html">Presentacion</a>
                   </li>
                   <li>
+                      <a class = "header-btn" href="turnos.php">Turnos</a>
+                  </li>
+                  <li>
                       <a class = "logOut" href="close.php">LogOut</a>
                   </li>
                     
@@ -244,8 +247,7 @@
     
     
     <footer>
-      <a href="./secret.html" class = "easter_egg"><img src=".\img\logo_2.png" width = "2.2%" alt="MoonDrive_logo"></a>    
-      <span>© MoonDrive Company </span>
+      
       
     </footer>
 

@@ -62,11 +62,12 @@
         margin-bottom: 0.5rem;
         font-size: 22px;
     }
+ 
+    
 
     .inputElement::placeholder {
-        background-color: transparent;
-        color: #ffffff;
-        border-color: #401464;
+        color:#cfcfcfbd;
+        font-weight: 900;
 
     }
 
