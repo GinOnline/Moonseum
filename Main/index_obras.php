@@ -102,7 +102,7 @@ if (isset($_GET['museo'])) {
 
     <div class="col-6 row" style="align-items:center;">
       <!--Museos -->
-      <h2 class="col-5 btn_title">Puntos de interés</h2>
+      <h2 class="col-5 btn_title"style="font-size:25px;" >Puntos de interés</h2>
       <!--Agregar nueva -->
       <a class="col-1" href="form_new_atraccion.php">
         <button class="icon-btn add-btn">
@@ -226,7 +226,8 @@ if (isset($_GET['museo'])) {
                                     ?></strong>
         <div class="card__body">
 
-          <img <?php echo 'src="' . $fila['imagen'] . '" alt="' . $fila['nombre'] . '"'; ?> width="400px" height="220px">
+          <img <?php echo 'src="' . $fila['imagen'] . '" alt="' . $fila['nombre'] . '"'; ?> width="325px" height="200px" style="margin-top:1.5rem;border-radius:20px;">
+          
         </div>
         <span class="info-container">
           <!-- Por alguna razon que desconozco, al usar class en vez de id, hace que el texto se agrande. despues se resolverá-->
